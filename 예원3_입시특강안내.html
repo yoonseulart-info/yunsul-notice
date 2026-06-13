@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>예원학교3 입시특강 안내 | 윤슬미술학원</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --accent: #7B6BA8;
+    --accent-light: #E5E0F5;
+    --ink: #1C1C2E;
+    --cream: #F8F5F0;
+    --warm-gray: #8C8278;
+    --divider: #DDD8D0;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  .hero {
+    background: var(--ink);
+    color: #fff;
+    padding: 48px 24px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '藝';
+    position: absolute;
+    right: -12px;
+    top: -20px;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 160px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .hero h1 span { color: #C8B8F0; }
+  .hero-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 12px;
+  }
+
+  .greeting {
+    padding: 28px 24px;
+    border-bottom: 1px solid var(--divider);
+    font-size: 14px;
+    color: #3C3830;
+    line-height: 1.85;
+  }
+  .greeting strong { color: var(--ink); font-weight: 700; }
+
+  .section {
+    padding: 28px 24px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--accent-light);
+  }
+
+  .start-date-card {
+    background: var(--accent);
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .start-date-card .label { font-size: 11px; letter-spacing: 0.1em; opacity: 0.8; margin-bottom: 6px; }
+  .start-date-card .date { font-family: 'Noto Serif KR', serif; font-size: 28px; font-weight: 700; line-height: 1.2; }
+  .start-date-card .sub { font-size: 12px; opacity: 0.75; margin-top: 4px; }
+
+  .days-badge {
+    background: var(--accent-light);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--ink);
+    font-weight: 500;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .days-badge strong { color: var(--accent); }
+
+  .time-cards { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+  .time-card { background: #fff; border: 1px solid var(--divider); border-radius: 8px; overflow: hidden; }
+  .time-card-head { background: var(--ink); color: #fff; font-size: 12px; font-weight: 700; padding: 8px 14px; letter-spacing: 0.05em; }
+  .time-card-body { padding: 10px 14px; }
+  .time-row { display: flex; align-items: baseline; gap: 8px; padding: 4px 0; font-size: 13px; border-bottom: 1px dashed var(--divider); }
+  .time-row:last-child { border-bottom: none; }
+  .time-name { font-size: 11px; font-weight: 700; color: var(--accent); min-width: 42px; }
+  .time-val { color: var(--ink); }
+
+  .warn-box {
+    background: #FFF0F0;
+    border-left: 3px solid #D94F4F;
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: #8B1A1A;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+
+  .notice-box {
+    background: #FFF8E7;
+    border-left: 3px solid #E8C06A;
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: #5C4800;
+    line-height: 1.7;
+    margin-top: 8px;
+  }
+
+  .prep-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .prep-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.65; }
+  .prep-list li::before { content: ''; display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-top: 8px; flex-shrink: 0; }
+
+  .etc-list { list-style: none; display: flex; flex-direction: column; gap: 8px; counter-reset: etc-counter; }
+  .etc-list li { font-size: 13.5px; line-height: 1.7; color: #3C3830; padding-left: 22px; position: relative; counter-increment: etc-counter; }
+  .etc-list li::before { content: counter(etc-counter) '.'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 12px; }
+
+  .hl { font-weight: 700; color: var(--accent); display: inline; }
+
+  .footer {
+    padding: 32px 24px;
+    text-align: center;
+    background: var(--ink);
+    color: rgba(255,255,255,0.7);
+  }
+  .footer .closing { font-family: 'Noto Serif KR', serif; font-size: 14px; color: #C8B8F0; margin-bottom: 20px; line-height: 1.8; }
+  .footer .academy { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .footer .tel { font-size: 18px; font-weight: 700; color: var(--accent); letter-spacing: 0.05em; text-decoration: none; display: inline-block; margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-tag">2026 입시특강 안내</div>
+  <h1>예원학교 3학년<br><span>입시 특강</span> 시작합니다</h1>
+  <p class="hero-sub">윤슬미술학원 · 2026</p>
+</div>
+
+<div class="greeting">
+  안녕하세요, <span class="hl">윤슬미술학원</span>입니다.<br>
+  기말고사가 끝나는 다음 날부터 매일 실기수업이 시작됩니다.<br>
+  (평일 저녁 1타임 + 주말수업)<br><br>
+  특강 기간 중 건강·체력 관리에 신경 써주시고,<br>
+  재료 준비와 <span class="hl">지각·결석이 없도록</span> 유의해 주시기 바랍니다.
+</div>
+
+<div class="section">
+  <div class="section-label">수업 시간 안내</div>
+
+  <div class="start-date-card">
+    <div class="label">특강 시작일</div>
+    <div class="date">7월 22일 (수)</div>
+    <div class="sub">B타임부터 진행</div>
+  </div>
+
+  <div class="warn-box">
+    ⚠️ 특강기간 중 지각·결석(병결 포함) 시<br><span class="hl">이월이 불가합니다.</span>
+  </div>
+
+  <div class="time-cards">
+    <div class="time-card">
+      <div class="time-card-head">타임 시간 안내</div>
+      <div class="time-card-body">
+        <div class="time-row">
+          <span class="time-name">A타임</span>
+          <span class="time-val">오전 9시 – 오후 1시</span>
+        </div>
+        <div class="time-row">
+          <span class="time-name">B타임</span>
+          <span class="time-val">오후 1시 30분 – 오후 5시 30분</span>
+        </div>
+        <div class="time-row">
+          <span class="time-name">C타임</span>
+          <span class="time-val">오후 6시 – 오후 10시</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="days-badge">수업 요일 : <span class="hl">화 · 목 · 토 · 일</span><br><span style="font-size:12px;font-weight:400;color:#666;">(학교 레슨시간에 따라 변경될 수 있습니다.)</span></div>
+
+  <div class="time-cards">
+    <div class="time-card">
+      <div class="time-card-head">화요일 · 목요일</div>
+      <div class="time-card-body">
+        <div class="time-row">
+          <span class="time-name">C타임</span>
+          <span class="time-val">오후 6시 – 오후 10시 <span style="font-size:11px;color:#888;">(추가 수업 필요 시 연장 가능)</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="time-card">
+      <div class="time-card-head">토요일</div>
+      <div class="time-card-body">
+        <div class="time-row">
+          <span class="time-name">A타임</span>
+          <span class="time-val">오전 9시 – 오후 1시</span>
+        </div>
+        <div class="time-row">
+          <span class="time-name">B타임</span>
+          <span class="time-val">오후 1시 30분 – 오후 5시 30분</span>
+        </div>
+        <div class="time-row">
+          <span class="time-name">C타임</span>
+          <span class="time-val">오후 6시 – 오후 10시</span>
+        </div>
+      </div>
+    </div>
+    <div class="time-card">
+      <div class="time-card-head">일요일</div>
+      <div class="time-card-body">
+        <div class="time-row">
+          <span class="time-name">A타임</span>
+          <span class="time-val">오전 9시 – 오후 1시</span>
+        </div>
+        <div class="time-row">
+          <span class="time-name">B타임</span>
+          <span class="time-val">오후 1시 30분 – 오후 5시 30분</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notice-box">
+    평일은 일반적으로 1타임 수업이지만,<br>
+    실기방학이나 학교가 일찍 끝나는 날은 2·3타임으로 진행됩니다.
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">수업 준비물</div>
+  <ul class="prep-list">
+    <li>연필 하루 <span class="hl">최소 80자루 이상</span> — 길고 뾰족한 연필 40자루 이상, 짧고 뾰족한 연필 20자루 이상, 길고 두꺼운 연필심 5자루 이상 (넉넉히 준비)</li>
+    <li>깨끗한 지우개(떡지우개) 반 자른 것 <span class="hl">매일 20개 이상</span></li>
+    <li>팔레트 물감 — 비는 곳 없이 <span class="hl">매일 체크</span></li>
+    <li>수채화 수업 시 <span class="hl">흡수 패드</span> 지참</li>
+    <li>냉방으로 추운 경우 <span class="hl">얇은 가디건</span> 준비</li>
+  </ul>
+</div>
+
+<div class="section">
+  <div class="section-label">기타 안내</div>
+  <ul class="etc-list">
+    <li>머리감기, 샤워 등 개인 위생에 신경 써 주시기 바랍니다.</li>
+    <li>도시락·배달음식 준비 시 반드시 <span class="hl">학생 이름을 기입</span>해 주세요.</li>
+    <li>여름철 식중독·장염이 자주 발생하니 음식에 주의해 주시기 바랍니다.</li>
+  </ul>
+</div>
+
+<div class="footer">
+  <p class="closing">올 입시도 최선을 다하는<br>윤슬미술학원이 되겠습니다.</p>
+  <p class="academy">윤슬미술학원</p>
+  <a class="tel" href="tel:025565565">02-556-5565</a>
+</div>
+
+</body>
+</html>
